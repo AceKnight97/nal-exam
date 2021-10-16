@@ -1,0 +1,36 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  &__filter {
+    border-bottom: 1px solid $gray-5;
+    padding: 24px 48px;
+    display: flex;
+    background-color: white;
+    &__search {
+      width: 400px;
+    }
+    &__sort {
+      display: flex;
+      margin-left: 24px;
+    }
+  }
+  &__body {
+    height: calc(100% - 281px);
+    overflow: auto;
+    padding: 24px 48px;
+    display: flex;
+    flex-wrap: wrap;
+    &__not-found {
+      // font-weight: bold;
+      font-style: 24px;
+      margin: 0 auto;
+    }
+  }
+
+  &__article {
+    padding: 24px 48px;
+    height: calc(100% - 200px);
+  }
+}

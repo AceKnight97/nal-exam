@@ -1,0 +1,53 @@
+.article-card {
+  border: 1px solid $gray-5;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  background-color: white;
+  // width: 500px;
+  width: calc(50% - 12px);
+  height: 114px;
+  &:hover {
+    border: 1px solid $geekblue-5;
+  }
+  &__image {
+    width: 64px;
+    height: 64px;
+  }
+
+  &__right {
+    flex: 1;
+    margin-left: 16px;
+    text-align: left;
+    overflow: auto;
+    height: 100%;
+    &__title {
+      font-weight: bold;
+    }
+    &__content {
+      margin-top: 8px;
+    }
+  }
+}
+.article-card--detail {
+  width: 100%;
+  height: unset;
+  align-items: unset;
+  .article-card {
+    &__image {
+      width: 400px;
+      height: 400px;
+    }
+
+    &__right {
+      margin-left: 48px;
+      &__title {
+        font-size: 48px;
+        line-height: 62px;
+      }
+      &__content {
+        margin-top: 16px;
+      }
+    }
+  }
+}

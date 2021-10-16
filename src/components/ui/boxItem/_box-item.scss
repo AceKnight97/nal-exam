@@ -1,0 +1,25 @@
+.box-item-wrapper {
+  width: $size-32;
+  height: $size-32;
+
+  background: $gray-1;
+  border: $size-1 solid $gray-5;
+  color: $gray-8;
+  box-sizing: border-box;
+  border-radius: $size-4;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  outline: none !important;
+  padding: 0;
+}
+
+.box-item-active,
+.box-item-wrapper:focus,
+.box-item-wrapper:hover,
+.box-item-wrapper:active {
+  border: $size-1 solid $blue-6 !important;
+  color: $blue-6 !important;
+}

@@ -1,0 +1,35 @@
+html {
+  // font-size: 16px;
+  scroll-behavior: smooth;
+
+  > * {
+    font-size: 0.875rem; // 14px
+    color: #000;
+    line-height: 1.375rem; // 22
+    font-family: "Open Sans";
+  }
+  main {
+    height: 100vh;
+  }
+  .div-root {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    &-header {
+      padding: 0;
+    }
+    .ant-layout-sider {
+      z-index: 1;
+    }
+    button {
+      cursor: pointer;
+    }
+    &-body {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      position: relative;
+      flex: 1;
+    }
+  }
+}

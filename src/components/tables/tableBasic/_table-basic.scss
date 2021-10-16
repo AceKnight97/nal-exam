@@ -1,0 +1,21 @@
+.ant-table {
+  &-wrapper {
+    tbody tr {
+      cursor: pointer;
+    }
+    .ant-pagination-total-text {
+      flex: 1;
+    }
+    ul > li:empty {
+      display: none;
+    }
+  }
+  &-cell {
+    &:not(:last-child) {
+      border-right: none !important;
+    }
+    &::before {
+      content: none !important;
+    }
+  }
+}

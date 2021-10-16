@@ -1,0 +1,29 @@
+.bas-btn {
+  padding: 0;
+  border: none;
+  outline: none !important;
+  background-color: transparent;
+
+  span {
+    cursor: unset !important;
+  }
+}
+
+.bas-0-btn {
+  border: none;
+  outline: none !important;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.fs {
+  &-18 {
+    font-size: 1.125rem;
+  }
+}
+.custom-noti-mes {
+  .ant-notification-notice-message {
+    font-weight: bold;
+  }
+}

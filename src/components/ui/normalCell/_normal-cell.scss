@@ -1,0 +1,16 @@
+.normal-cell {
+  &-link-name {
+    color: $blue-6;
+    padding: 0;
+    border: none;
+    outline: none !important;
+    background-color: transparent;
+    &:hover {
+      text-decoration: underline;
+    }
+    span {
+      cursor: pointer;
+      // cursor: unset !important;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.dropdown-input-address-popover,
+.dropdown-input-city-popover {
+  .popover {
+    max-width: 100%;
+    left: $size-0-1 !important;
+    border: none !important;
+    width: calc((100% - 200px) * 5 / 12 - 3rem);
+    .arrow {
+      display: none;
+    }
+    border: none !important;
+  }
+  .suggestion-item {
+    cursor: pointer;
+    background-color: white;
+    color: $gray-9;
+    overflow: hidden;
+    padding: $size-4 $size-8;
+    font-size: $size-14;
+  }
+  .active-item {
+    background-color: $gray-3;
+  }
+  .suggestion-inner {
+    display: flex;
+    flex-direction: column;
+    border-radius: $size-8;
+    overflow: auto;
+  }
+  .have-suggestions {
+    border: $size-1 solid $gray-3;
+  }
+}

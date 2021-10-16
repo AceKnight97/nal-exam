@@ -1,0 +1,301 @@
+// define font size variables
+$size-0-16: -1rem;
+$size-0-10: -0.625rem;
+$size-0-6: -0.375rem;
+$size-0-3: -0.1875rem;
+$size-0-1: -0.0625rem;
+$size-1: 0.0625rem;
+$size-2: 0.125rem;
+$size-3: 0.1875rem;
+$size-4: 0.25rem;
+$size-5: 0.3125rem;
+$size-6: 0.375rem;
+$size-7: 0.4375rem;
+$size-8: 0.5rem;
+$size-8-05: 0.53125rem;
+$size-10: 0.625rem;
+$size-11: 0.6875rem;
+$size-12: 0.75rem;
+$size-12-05: 0.78125rem;
+$size-14: 0.875rem;
+$size-15: 0.9375rem;
+$size-16: 1rem;
+$size-17: 1.0625rem;
+$size-18: 1.125rem;
+$size-20: 1.25rem;
+$size-20-05: 1.253125rem;
+$size-22: 1.375rem;
+$size-23: 1.4375rem;
+$size-24: 1.5rem;
+$size-25: 1.5625rem;
+$size-26: 1.625rem;
+$size-28: 1.74rem;
+$size-30: 1.875rem;
+$size-32: 2rem;
+$size-34: 2.125rem;
+$size-36: 2.25rem;
+$size-38: 2.375rem;
+$size-40: 2.5rem;
+$size-45: 2.8125rem;
+$size-46: 2.875rem;
+$size-48: 3rem;
+$size-50: 3.125rem;
+$size-52: 3.25rem;
+$size-54: 3.375rem;
+$size-56: 3.5rem;
+$size-64: 4rem;
+$size-68: 4.25rem;
+$size-70: 4.375rem;
+$size-75: 4.6875rem;
+$size-76: 4.75rem;
+$size-80: 5rem;
+$size-84: 5.25rem;
+$size-100: 6.25rem;
+$size-104: 6.5rem;
+$size-108: 6.75rem;
+$size-110: 6.875rem;
+$size-120: 7.5rem;
+$size-128: 8rem;
+$size-134: 8.375rem;
+$size-145: 9.0625rem;
+$size-146: 9.125rem;
+$size-148: 9.25rem;
+$size-150: 9.375rem;
+$size-160: 10rem;
+$size-166: 10.375rem;
+$size-180: 11.25rem;
+$size-200: 12.5rem;
+$size-220: 13.75rem;
+$size-250: 15.625rem;
+$size-270: 16.875rem;
+$size-285: 17.8125rem;
+$size-294: 18.375rem;
+$size-522: 32.625rem;
+$size-320: 20rem;
+$size-340: 21.25rem;
+$size-360: 22.5rem;
+$size-610: 38.125rem;
+$size-700: 43.75rem;
+$size-800: 50rem;
+$size-840: 52.5rem;
+
+.m {
+  &-0 {
+    margin: 0;
+  }
+}
+
+.mt {
+  &-0 {
+    margin-top: 0;
+  }
+  &-4 {
+    margin-top: 0.25rem;
+  }
+  &-4-px {
+    margin-top: 0.25rem;
+  }
+  &-8 {
+    margin-top: 0.5rem;
+  }
+  &-12 {
+    margin-top: 0.75rem;
+  }
+
+  &-14 {
+    margin-top: 0.875rem;
+  }
+
+  &-16 {
+    margin-top: 1rem;
+  }
+
+  &-24 {
+    margin-top: 1.5rem;
+  }
+
+  &-32 {
+    margin-top: 2rem;
+  }
+
+  &-40 {
+    margin-top: 2.5rem;
+  }
+
+  &-48 {
+    margin-top: 3rem;
+  }
+
+  &-56 {
+    margin-top: 3.5rem;
+  }
+
+  &-112 {
+    margin-top: 7rem;
+  }
+}
+
+.mr {
+  &-8 {
+    margin-right: 0.5rem;
+  }
+  &-12 {
+    margin-right: 0.75rem;
+  }
+
+  &-14 {
+    margin-right: 0.875rem;
+  }
+
+  &-16 {
+    margin-right: 1rem;
+  }
+
+  &-24 {
+    margin-right: 1.5rem;
+  }
+
+  &-40 {
+    margin-right: 2.5rem;
+  }
+}
+
+.mb {
+  &-12 {
+    margin-bottom: 0.75rem;
+  }
+
+  &-14 {
+    margin-bottom: 0.875rem;
+  }
+
+  &-16 {
+    margin-bottom: 1rem;
+  }
+
+  &-24 {
+    margin-bottom: 1.5rem;
+  }
+
+  &-40 {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.ml {
+  &-8 {
+    margin-left: 0.5rem;
+  }
+
+  &-12 {
+    margin-left: 0.75rem;
+  }
+
+  &-16 {
+    margin-left: 1rem;
+  }
+
+  &-14 {
+    margin-left: 0.875rem;
+  }
+
+  &-24 {
+    margin-left: 1.5rem;
+  }
+
+  &-40 {
+    margin-left: 2.5rem;
+  }
+
+  &-48 {
+    margin-left: 3rem;
+  }
+}
+.mv {
+  &-16 {
+    margin: 1rem 0;
+  }
+}
+
+.pad {
+  &-8 {
+    padding: 0.5rem;
+  }
+  &-0-1 {
+    padding: 0 1px;
+  }
+  &-0 {
+    padding: 0;
+  }
+  &-24 {
+    padding: 1.5rem;
+  }
+}
+
+.pt {
+  &-12 {
+    padding-top: 0.75rem;
+  }
+
+  &-16 {
+    padding-top: 1rem;
+  }
+
+  &-24 {
+    padding-top: 1.5rem;
+  }
+
+  &-40 {
+    padding-top: 2.5rem;
+  }
+}
+
+.pr {
+  &-0 {
+    padding-right: 0rem;
+  }
+  &-8 {
+    padding-right: 0.5rem;
+  }
+  &-12 {
+    padding-right: 0.75rem;
+  }
+
+  &-24 {
+    padding-right: 1.5rem;
+  }
+}
+
+.pb {
+  &-0 {
+    padding-bottom: 0rem;
+  }
+  &-12 {
+    padding-bottom: 0.75rem;
+  }
+  &-16 {
+    padding-bottom: 1rem;
+  }
+
+  &-24 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.pl {
+  &-8 {
+    padding-left: 0.5rem;
+  }
+
+  &-12 {
+    padding-left: 0.75rem;
+  }
+
+  &-24 {
+    padding-left: 1.5rem;
+  }
+
+  &-32 {
+    padding-left: 2rem;
+  }
+}
