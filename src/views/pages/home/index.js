@@ -26,13 +26,13 @@ const Home = (props) => {
 
   const getListArticles = async (page = 1) => {
     const res = await queryListOfArticles(state, page, null, null, null);
-    console.log({ res });
+    // console.log({ res });
     setState(res);
   };
 
   const getAnArticle = async (id) => {
     const article = await queryAnArticle(id);
-    console.log({ article });
+    // console.log({ article });
     setState({ article });
   };
 
@@ -49,7 +49,6 @@ const Home = (props) => {
   } = state;
 
   const pages = Math.ceil(listArticles?.length / 10);
-  console.log({ pages });
 
   useUpdateEffect(() => {
     if (deboundSearch.current) {
@@ -63,15 +62,19 @@ const Home = (props) => {
   }, [searchText]);
 
   const onClickArticle = (id = '') => {
-    getAnArticle(id);
+    if (deboundSearch.current) {
+      clearTimeout(deboundSearch.current);
+    }
+    deboundSearch.current = setTimeout(async () => {
+      getAnArticle(id);
+    }, 300);
   };
 
   const onClickChangePage = async (newPage) => {
-    console.log({ newPage });
     if (newPage >= pages) {
       const res = await queryListOfArticles(state, newPage + 1, null, null, true);
       _.assign(res, { page: newPage });
-      console.log({ res });
+      // console.log({ res });
       setState(res);
     } else {
       setState({ page: newPage });
@@ -79,10 +82,18 @@ const Home = (props) => {
   };
 
   const onClickSortType = async (order) => {
-    const res = await queryListOfArticles(state, null, order, null, false);
-    _.assign(res, { page: 0, sortOrder: order });
-    console.log({ res });
-    setState(res);
+    if (sortOrder === order) {
+      return;
+    }
+    if (deboundSearch.current) {
+      clearTimeout(deboundSearch.current);
+    }
+    deboundSearch.current = setTimeout(async () => {
+      const res = await queryListOfArticles(state, null, order, null, false);
+      _.assign(res, { page: 0, sortOrder: order });
+      // console.log({ res });
+      setState(res);
+    }, 300);
   };
   const onClickBack = () => {
     setState({ article: {} });

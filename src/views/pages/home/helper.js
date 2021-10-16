@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { showSuccessMsg, showFailedMsg } from '../../../utils/toastNotification';
 
 export const temp = '';
 
@@ -21,6 +22,7 @@ export const queryListOfArticles = async (state = {}, page, order, search, isLoa
     return { listArticles, isEndOfData };
   } catch (error) {
     console.log('Failed to get List of Articles: ', error);
+    showFailedMsg('Error', 3, error?.response?.data || 'Not found');
     return [];
   }
 };
@@ -29,22 +31,11 @@ export const queryAnArticle = async (id = '') => {
   const param = `${LIST_OF_ARTICLES}/${id}`;
   try {
     const res = await axios.get(param);
-    console.log({ res });
+    // console.log({ res });
     return res?.data;
   } catch (error) {
     console.log('Failed to get the Article: ', error);
-    return [];
+    showFailedMsg('Error', 3, error?.response?.data || 'Not found');
+    return {};
   }
 };
-
-// export const querySortedArticles = async (type = '', order = 'asc') => {
-//   const param = `${LIST_OF_ARTICLES}?sortBy=${type}&order=${order}`;
-//   try {
-//     const res = await axios.get(param);
-//     console.log({ res });
-//     return res?.data;
-//   } catch (error) {
-//     console.log('Failed to get the Article: ', error);
-//     return [];
-//   }
-// };

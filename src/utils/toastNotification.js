@@ -1,25 +1,33 @@
-import toastr from 'toastr';
+import { notification } from 'antd';
 
-export const toastrInfo = (message, title) => {
-  toastr.info(message, title, {
-    progressBar: false,
-    positionClass: 'toast-bottom-left',
-    preventDuplicates: true,
-  });
+let handleShowMes;
+
+export const showFailedMsg = (message = '', duration = 3, description = undefined) => {
+  notification.destroy();
+  if (handleShowMes) {
+    clearTimeout(handleShowMes);
+  }
+  handleShowMes = setTimeout(() => {
+    notification.error({
+      message,
+      description,
+      placement: 'bottomLeft',
+      duration,
+    });
+  }, 300);
 };
 
-export const toastrSuccess = (message, title) => {
-  toastr.success(message, title, {
-    progressBar: false,
-    positionClass: 'toast-bottom-left',
-    preventDuplicates: true,
-  });
-};
-
-export const toastrError = (message, title) => {
-  toastr.error(message, title, {
-    progressBar: false,
-    positionClass: 'toast-bottom-left',
-    preventDuplicates: true,
-  });
+export const showSuccessMsg = (message = '', duration = 3, description = undefined) => {
+  notification.destroy();
+  if (handleShowMes) {
+    clearTimeout(handleShowMes);
+  }
+  handleShowMes = setTimeout(() => {
+    notification.success({
+      message,
+      description,
+      placement: 'bottomLeft',
+      duration,
+    });
+  }, 300);
 };
